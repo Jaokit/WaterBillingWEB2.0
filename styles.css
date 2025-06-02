@@ -19,6 +19,15 @@ body {
 h1 {
   text-align: center;
   color: #0077cc;
+  margin-bottom: 1rem;
+}
+
+h1 .subhead {
+  font-size: 1.1rem;
+  font-weight: normal;
+  display: block;
+  color: #0077cc;
+  margin-top: 0.2rem;
 }
 
 .form-group {
