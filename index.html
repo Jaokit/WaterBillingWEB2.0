@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ระบบออกบิลค่าน้ำ</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>ระบบออกบิลค่าน้ำบ้านสวยบางเลน</h1>
+
+    <form id="billForm">
+      <div class="form-group">
+        <label>บ้านเลขที่</label>
+        <input type="text" id="houseNumber" required />
+        <button type="button" id="fetchMeter">ดึงข้อมูลมิเตอร์</button>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>เลขมิเตอร์ครั้งก่อน</label>
+          <input type="number" id="prevMeter" required />
+        </div>
+        <div class="form-group">
+          <label>เลขมิเตอร์ครั้งนี้</label>
+          <input type="number" id="currMeter" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>ค่าบริการอื่น ๆ</label>
+        <input type="number" id="otherCharges" value="0" required />
+      </div>
+
+      <div class="form-group">
+        <label>วันที่ออกบิล</label>
+        <input type="text" id="billDate" readonly />
+      </div>
+
+      <button type="submit" class="primary">สร้างบิล</button>
+    </form>
+
+    <div id="billPreview" class="bill hidden"></div>
+
+    <div class="actions">
+      <button id="printBill">พิมพ์บิล</button>
+      <button id="exportData">โหลดข้อมูลรายเดือน</button>
+      <button id="viewHistory">ดูประวัติ</button>
+    </div>
+
+    <div id="historyModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>ประวัติการบันทึก</h2>
+        <ul id="historyList"></ul>
+        <button onclick="closeHistory()">ปิด</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    © 2025 ระบบออกบิลค่าน้ำบ้านสวยบางเลน
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
