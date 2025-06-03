@@ -41,6 +41,10 @@ form.onsubmit = (e) => {
     <h3>รวมค่าใช้จ่าย: ${total} บาท</h3>
     <p style="text-align: center; margin-top: 20px;">สแกนเพื่อชำระเงิน</p>
     <img src="images/qrcode.jpg" alt="QR PromptPay" class="qr-image" />
+    <p style="text-align: center; margin-top: 8px; line-height: 1.4;">
+      แอดไลน์ 093-4935691<br>
+      โอนแล้วรบกวนส่งสลิปผ่านไลน์ด้วยค่ะ
+    </p>
   `;
 
   billPreview.classList.remove("hidden");
